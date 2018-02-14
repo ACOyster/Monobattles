@@ -1,0 +1,27 @@
+{
+    "author": "acesoyster",
+    "build": "105067",
+    "context": "server",
+    "date": "2018-02-14",
+    "description": "Limits each player to a single offensive unit, randomly selected. Games will not be fair. Games might be fun. Fabricators, Turrets, Scouts, and Transports remain available. Lob and Combat Fabricators are disabled.",
+    "display_name": "Monobattles",
+    "identifier": "com.acesoyster.pa.monobattles",
+    "forum": "",
+    "signature": "(not yet implemented)",
+    "version": "0.1.0",
+    "scenes": {
+        "global_mod_list": [
+            "coui://ui/mods/com.acesoyster.pa.monobattles/unit_select.js"
+        ],
+        "live_game": [
+            "coui://ui/mods/com.acesoyster.pa.monobattles/announce.js"
+        ]
+    },
+    "dependencies": [
+        "com.wondible.pa.hodgepodge"
+    ],
+    "unitList": false,
+    "priority": 100,
+    "dependencies": [],
+    "titansOnly": false
+}
