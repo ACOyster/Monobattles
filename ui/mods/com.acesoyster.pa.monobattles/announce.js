@@ -1,6 +1,7 @@
 handlers.client_state = function (client) {
 	var announced = false;
-	var message_object = {message: "Unit Announcement Error"}
+	var message_object = {message: "Unit Announcement Error"};
+	var message_base = "!LOC:";
 
     switch (model.mode()) {
         case 'landing':
@@ -16,8 +17,10 @@ handlers.client_state = function (client) {
                     helper: true
                 });
             	if (window.HodgePodge && (announced == false)) {
-					message_object["message"] = localStorage.getItem("monobattles_name");
-					model.send_message("chat_message", message_object);
+					message_object["message"] = loc(message_base.concat(localStorage.getItem("monobattles_name")));
+					if (message_object["message"] != "null") {
+						model.send_message("chat_message", message_object);
+					}
 					announced = true;
 				}
             break;
