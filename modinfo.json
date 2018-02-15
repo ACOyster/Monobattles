@@ -2,7 +2,7 @@
     "author": "acesoyster",
     "build": "105067",
     "context": "server",
-    "date": "2018-02-14",
+    "date": "2018-02-15",
     "description": "Limits each player to a single offensive unit, randomly selected. Games will not be fair. Games might be fun. Fabricators, Turrets, Scouts, and Transports remain available. Lob and Combat Fabricators are disabled.",
     "display_name": "Monobattles",
     "identifier": "com.acesoyster.pa.monobattles",
