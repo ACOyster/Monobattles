@@ -16,7 +16,7 @@ handlers.client_state = function (client) {
                     helper: true
                 });
             	if (window.HodgePodge && (announced == false)) {
-					message_object["message"] = localStorage.getItem("monobattles_selection");
+					message_object["message"] = localStorage.getItem("monobattles_name");
 					model.send_message("chat_message", message_object);
 					announced = true;
 				}
@@ -27,6 +27,7 @@ handlers.client_state = function (client) {
 
 handlers.celestial_data = function (payload) {
 	localStorage.removeItem("monobattles_selection")
+	localStorage.removeItem("monobattles_name")
     model.systemName(payload.name);
 
 

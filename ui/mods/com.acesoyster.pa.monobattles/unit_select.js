@@ -14,7 +14,6 @@ var unit_roster = ["/pa/units/air/bomber/bomber.json",
     "/pa/units/land/bot_bomb/bot_bomb.json",
     "/pa/units/land/bot_grenadier/bot_grenadier.json",
     "/pa/units/land/bot_sniper/bot_sniper.json",
-    "/pa/units/land/bot_spider_adv/bot_spider_adv.json",
     "/pa/units/land/bot_tactical_missile/bot_tactical_missile.json",
     "/pa/units/land/tank_armor/tank_armor.json",
     "/pa/units/land/tank_heavy_armor/tank_heavy_armor.json",
@@ -48,6 +47,51 @@ var unit_roster = ["/pa/units/air/bomber/bomber.json",
     "/pa/units/sea/drone_carrier/carrier/carrier.json",
     "/pa/units/sea/hover_ship/hover_ship.json"];
 
+var unit_names = ["Bumblebee",
+    "Hornet",
+    "Hummingbird",
+    "Pheonix",
+    "Kestral",
+    "Spinner",
+    "Dox",
+    "Slammer",
+    "Boom",
+    "Grenadier",
+    "Gil-E",
+    "Bluehawk",
+    "Inferno",
+    "Vanguard",
+    "Sheller",
+    "Leveller",
+    "Ant",
+    "Avenger",
+    "SSX-1304",
+    "Barracuda",
+    "Leviathan",
+    "Narwhal",
+    "Orca",
+    "Stingray",
+    "Kraken",
+    "Piranha",
+    "Wyrm",
+    "Icarus",
+    "Angel",
+    "Zeus",
+    "Locust",
+    "Colonel",
+    "Spark",
+    "Storm",
+    "Drifter",
+    "Manhattan",
+    "Atlas",
+    "Ares",
+    "Omega",
+    "Artemis",
+    "Helios",
+    "Typhoon",
+    "Kaiju"];
+
+
 var unit_bans_length = unit_bans.length;
 var unit_roster_length = unit_roster.length;
 
@@ -61,6 +105,8 @@ else {
     console.log(selection_number);
 
     localStorage.setItem("monobattles_selection", unit_roster[selection_number]);
+    localStorage.setItem("monobattles_name", unit_names[selection_number]);
+    selected = unit_roster[selection_number];
 }
 
 console.log(selected);
