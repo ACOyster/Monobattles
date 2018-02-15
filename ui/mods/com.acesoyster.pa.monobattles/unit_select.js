@@ -47,51 +47,6 @@ var unit_roster = ["/pa/units/air/bomber/bomber.json",
     "/pa/units/sea/drone_carrier/carrier/carrier.json",
     "/pa/units/sea/hover_ship/hover_ship.json"];
 
-var unit_names = ["Bumblebee",
-    "Hornet",
-    "Hummingbird",
-    "Pheonix",
-    "Kestral",
-    "Spinner",
-    "Dox",
-    "Slammer",
-    "Boom",
-    "Grenadier",
-    "Gil-E",
-    "Bluehawk",
-    "Inferno",
-    "Vanguard",
-    "Sheller",
-    "Leveller",
-    "Ant",
-    "Avenger",
-    "SSX-1304",
-    "Barracuda",
-    "Leviathan",
-    "Narwhal",
-    "Orca",
-    "Stingray",
-    "Kraken",
-    "Piranha",
-    "Wyrm",
-    "Icarus",
-    "Angel",
-    "Zeus",
-    "Locust",
-    "Colonel",
-    "Spark",
-    "Storm",
-    "Drifter",
-    "Manhattan",
-    "Atlas",
-    "Ares",
-    "Omega",
-    "Artemis",
-    "Helios",
-    "Typhoon",
-    "Kaiju"];
-
-
 var unit_bans_length = unit_bans.length;
 var unit_roster_length = unit_roster.length;
 
@@ -99,14 +54,6 @@ var selected;
 
 if (!!localStorage.getItem("monobattles_selection")) {
     selected = localStorage.getItem("monobattles_selection");   
-}
-else {
-    selection_number = Math.round(Math.random() * (unit_roster_length - 1));
-    console.log(selection_number);
-
-    localStorage.setItem("monobattles_selection", unit_roster[selection_number]);
-    localStorage.setItem("monobattles_name", unit_names[selection_number]);
-    selected = unit_roster[selection_number];
 }
 
 console.log(selected);
@@ -128,5 +75,4 @@ if (window.HodgePodge) {
             },
         ]);
     }
-    console.log('Monobattles build, client build bar successfully updated');
 }
