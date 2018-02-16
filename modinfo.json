@@ -8,7 +8,7 @@
     "identifier": "com.acesoyster.pa.monobattles",
     "forum": "",
     "signature": "(not yet implemented)",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "scenes": {
         "global_mod_list": [
             "coui://ui/mods/com.acesoyster.pa.monobattles/unit_select.js"

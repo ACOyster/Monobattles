@@ -3,6 +3,7 @@
 var unit_bans = ["/pa/units/land/fabrication_bot_combat/fabrication_bot_combat.json",
     "/pa/units/land/fabrication_bot_combat_adv/fabrication_bot_combat_adv.json",
     "/pa/units/land/artillery_unit_launcher/artillery_unit_launcher.json",
+    "/pa/units/air/support_platform/support_platform.json",
     "/pa/units/sea/fabrication_barge/fabrication_barge.json"]; //Units removed for all players
 
 var unit_roster = ["/pa/units/air/bomber/bomber.json",
@@ -33,7 +34,6 @@ var unit_roster = ["/pa/units/air/bomber/bomber.json",
     "/pa/units/sea/sea_scout/sea_scout.json",
     "/pa/units/air/bomber_heavy/bomber_heavy.json",
     "/pa/units/air/solar_drone/solar_drone.json",
-    "/pa/units/air/support_platform/support_platform.json",
     "/pa/units/air/titan_air/titan_air.json",
     "/pa/units/land/bot_nanoswarm/bot_nanoswarm.json",
     "/pa/units/land/bot_support_commander/bot_support_commander.json",
