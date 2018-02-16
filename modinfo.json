@@ -6,7 +6,7 @@
     "description": "Limits each player to a single offensive unit, randomly selected. Games will not be fair. Games might be fun. Fabricators, Turrets, Scouts, and Transports remain available. Lob and Combat Fabricators are disabled.",
     "display_name": "Monobattles",
     "identifier": "com.acesoyster.pa.monobattles",
-    "icon": "https://github.com/ACOyster/monobattles/blob/master/monobattles_logo.png",
+    "icon": "https://raw.githubusercontent.com/ACOyster/monobattles/master/monobattles_logo.png",
     "forum": "https://forums.uberent.com/threads/monobattles.72797/",
     "signature": "(not yet implemented)",
     "version": "0.2.1",
