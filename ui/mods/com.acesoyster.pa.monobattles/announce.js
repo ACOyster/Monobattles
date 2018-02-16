@@ -1,7 +1,9 @@
 handlers.client_state = function (client) {
+	//<Monobattles Code> Variables used by Monobattles
 	var announced = false;
 	var message_object = {message: "Unit Announcement Error"};
 	var message_base = "!LOC:";
+	//</Monobattles Code>
 
     switch (model.mode()) {
         case 'landing':
@@ -17,14 +19,16 @@ handlers.client_state = function (client) {
                     helper: true
                 });
             	if (window.HodgePodge && (announced == false)) {
-            		console.log("attempt to read storage");
+            		//<Monobattles Code> Prints the given unit to chat at spawn selection
+            		console.log("Monobattles: Chat function attempt to read storage");
 					message_object["message"] = loc(message_base.concat(localStorage.getItem("monobattles_name")));
-					if (message_object["message"] != "null") {
+					if (message_object["message"] != "null") { //If null, skip. Happened in older versions.
 						model.send_message("chat_message", message_object);
-						console.log("successfully read storage");
+						console.log("Monobattles: Unit name successfully read from storage");
 						console.log(message_object["message"]);
 					}
 					announced = true;
+					//</Monobattles Code>
 				}
             break;
         default: /* do nothing */ break;
@@ -32,6 +36,7 @@ handlers.client_state = function (client) {
 };
 
 handlers.celestial_data = function (payload) {
+	//<Monobattles Code> Random unit is chosen at the start of celestial view, which coincides with the beginning of the game.
 	var unit_roster = ["/pa/units/air/bomber/bomber.json",
 	    "/pa/units/air/bomber_adv/bomber_adv.json",
 	    "/pa/units/air/fighter/fighter.json",
@@ -74,7 +79,7 @@ handlers.celestial_data = function (payload) {
 	    "/pa/units/orbital/orbital_railgun/orbital_railgun.json",
 	    "/pa/units/orbital/titan_orbital/titan_orbital.json",
 	    "/pa/units/sea/drone_carrier/carrier/carrier.json",
-	    "/pa/units/sea/hover_ship/hover_ship.json"];
+	    "/pa/units/sea/hover_ship/hover_ship.json"]; //Possible units for selection
 
 	var unit_names = ["Bumblebee",
 	    "Hornet",
@@ -97,8 +102,8 @@ handlers.celestial_data = function (payload) {
 	    "SSX-1304",
 	    "Barracuda",
 	    "Leviathan",
-	    "Narwhal",
 	    "Orca",
+	    "Narwhal",
 	    "Stingray",
 	    "Kraken",
 	    "Piranha",
@@ -118,16 +123,20 @@ handlers.celestial_data = function (payload) {
 	    "Artemis",
 	    "Helios",
 	    "Typhoon",
-	    "Kaiju"];
+	    "Kaiju"]; //In the same order as above, display names of units.
 
-    model.systemName(payload.name);
-
+    //Choose a random number less than the last index of the array
     selection_number = Math.round(Math.random() * (unit_roster.length - 1));
-    console.log("Setting new random unit");
+    console.log("Monobattles: Setting new random unit");
 
     localStorage.setItem("monobattles_selection", unit_roster[selection_number]);
     localStorage.setItem("monobattles_name", unit_names[selection_number]);
     selected = unit_roster[selection_number];
+
+    console.log(selected);
+    //</Monobattles Code>
+
+    model.systemName(payload.name);
 
     if (payload.planets.length)
         model.startingPlanetBiome(payload.planets[0].biome);

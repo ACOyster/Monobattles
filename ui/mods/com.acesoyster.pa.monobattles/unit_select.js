@@ -1,7 +1,9 @@
+//Monobattles Code, note that this runs many times as is a requirement of Hodgepodge.
+
 var unit_bans = ["/pa/units/land/fabrication_bot_combat/fabrication_bot_combat.json",
     "/pa/units/land/fabrication_bot_combat_adv/fabrication_bot_combat_adv.json",
     "/pa/units/land/artillery_unit_launcher/artillery_unit_launcher.json",
-    "/pa/units/sea/fabrication_barge/fabrication_barge.json"];
+    "/pa/units/sea/fabrication_barge/fabrication_barge.json"]; //Units removed for all players
 
 var unit_roster = ["/pa/units/air/bomber/bomber.json",
     "/pa/units/air/bomber_adv/bomber_adv.json",
@@ -45,7 +47,7 @@ var unit_roster = ["/pa/units/air/bomber/bomber.json",
     "/pa/units/orbital/orbital_railgun/orbital_railgun.json",
     "/pa/units/orbital/titan_orbital/titan_orbital.json",
     "/pa/units/sea/drone_carrier/carrier/carrier.json",
-    "/pa/units/sea/hover_ship/hover_ship.json"];
+    "/pa/units/sea/hover_ship/hover_ship.json"]; //Possible units for selection
 
 var unit_bans_length = unit_bans.length;
 var unit_roster_length = unit_roster.length;
