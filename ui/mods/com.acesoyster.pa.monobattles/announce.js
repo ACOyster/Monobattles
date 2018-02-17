@@ -1,7 +1,7 @@
 handlers.client_state = function (client) {
 	//<Monobattles Code> Variables used by Monobattles
 	var message_object = {message: "Unit Announcement Error"};
-	var message_base = "!LOC:";
+	var message_base = "I can only build ";
 	//</Monobattles Code>
 
     switch (model.mode()) {
