@@ -21,11 +21,13 @@ handlers.client_state = function (client) {
             		//<Monobattles Code> Prints the given unit to chat at spawn selection
             		console.log("Monobattles: Chat function attempt to read storage");
 					message_object["message"] = loc(message_base.concat(localStorage.getItem("monobattles_name")));
-					if (message_object["message"] != "null") { //If null, skip. Happened in older versions.
+					if ((message_object["message"] != "null") && (localStorage.getItem("monobattles_fired") != "true")) { //Only run once.
 						model.send_message("chat_message", message_object);
 						console.log("Monobattles: Unit name successfully read from storage");
 						console.log(message_object["message"]);
 					}
+
+					localStorage.setItem("monobattles_fired", "true");
 					//</Monobattles Code>
 				}
             break;
@@ -126,6 +128,7 @@ console.log("Monobattles: Setting new random unit");
 
 localStorage.setItem("monobattles_selection", unit_roster[selection_number]);
 localStorage.setItem("monobattles_name", unit_names[selection_number]);
+localStorage.setItem("monobattles_fired", "false");
 selected = unit_roster[selection_number];
 
 console.log(selected);
